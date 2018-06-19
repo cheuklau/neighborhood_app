@@ -53,7 +53,7 @@ function initMap() {
 
     }
 
-};
+}
 
 function populateInfoWindow(marker) {
     /* Populate infowindow with the name of the lab for clicked marker.
@@ -71,7 +71,7 @@ function populateInfoWindow(marker) {
         });
     }
 
-};
+}
 
 function displaySpecificMarker(clickedLab) {
     /* Display marker of the clicked lab, hide the rest.
@@ -94,7 +94,7 @@ function displaySpecificMarker(clickedLab) {
 
     }
 
-};
+}
 
 function displayAllMarkers() {
     /* Re-displays all markers.
@@ -108,4 +108,4 @@ function displayAllMarkers() {
         markers[i].setMap(map);
     }
 
-};
+}

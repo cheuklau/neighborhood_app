@@ -67,7 +67,7 @@ var ViewModel = function() {
         $newsElem.text("");
 
         // NYT AJAX request URL
-        var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q='+selectedLab.title()+'&sort=newest&api-key=0695f3deb8554240b3491936ac72d674'
+        var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q='+selectedLab.title()+'&sort=newest&api-key=0695f3deb8554240b3491936ac72d674';
 
         // Perform NYT AJAX request
         $.getJSON(nytimesUrl, function(data){
@@ -82,11 +82,11 @@ var ViewModel = function() {
                     '<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
                     '<p>'+article.snippet+'</p>'+
                     '</li>');
-            };
+            }
 
         // Add error handling if NYT request fails
         }).error(function(e){
-            $newsElem.append('<p id="newsErrorMessage">Error loading news.</p>')
+            $newsElem.append('<p id="newsErrorMessage">Error loading news.</p>');
         });
     };
 

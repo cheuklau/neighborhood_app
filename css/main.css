@@ -1,0 +1,122 @@
+/* 
+ *
+ * Body, html
+ * 
+ */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+ *
+ * Page layout
+ * Note: explicit width and height required for divs containing
+ *       map element.
+ *
+ */
+
+.row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.column__info {
+  padding: 5px;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.column__map {
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+
+.column__news {
+  float: left;
+  padding: 5px;
+  width: 20%;
+  height: 100%;
+  overflow: auto;
+}
+
+/*
+ *
+ * Map object
+ *
+ */
+
+#map {
+  height:100%;
+}
+
+#googleErrorMessage {
+  line-height: 300px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/*
+ *
+ * News object
+ *
+ */
+
+#newsErrorMessage {
+  text-align: center;
+}
+
+/*
+ *
+ * List of laboratories
+ *
+ */
+
+.drop__info {
+    display: block;
+    margin: 0 auto;
+    width: 175px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  text-align:center;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+/*
+ *
+ * Headers
+ *
+ */
+
+.header__info {
+  height: 10%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__news {
+  height: 10%;
+  text-align: center;
+  text-transform: uppercase;
+}

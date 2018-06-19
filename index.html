@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <!-- The head contains preliminary information and links to CSS -->
+    <head>
+
+        <!-- Set meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Define the page title -->
+        <title>Neighborhood App</title>
+
+        <!-- Set up link to Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+
+        <!-- Set up link to accompanying CSS style sheets -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    </head>
+
+    <!-- The body contains the content -->
+    <body>
+
+        <!-- Divide the page into three columns -->
+        <div class="row content">
+
+            <!-- Left column contains laboratory filter and names -->
+            <div class="column__info">
+
+                <!-- Laboratory header which displays all markers if clicked -->
+                <h2 class="header__info" data-bind="click: showAllLabs">National Laboratories</h2>
+
+                <!-- Create dropdown of labs -->
+                <select class="drop__info"
+                        data-bind="options: labList,
+                                optionsText: 'title',
+                                value: selectedLab,
+                                optionsCaption: 'Choose a laboratory!',
+                                event: {change: selectLabDrop}"></select>
+
+                <!-- Create a list for each observable in labList -->
+                <ul data-bind="foreach: labList">
+        
+                    <!-- Must be able to click on name to display info -->
+                    <li data-bind="text: title, click: selectLab"></li>
+   
+                </ul>
+
+            </div>
+
+            <!-- Center column contains the map -->
+            <div class="column__map">
+
+                <!-- Create span for error message loading Google Maps API -->
+                <span data-bind="html: googleErrorMessage"></span>
+
+                <!-- Create map div -->
+                <div id="map"></div>
+
+            </div>
+
+            <!-- Right column contains the New York Times links -->
+            <div class="column__news">
+      
+                <!-- Create news header -->
+                <h2 class="header__news">Latest News</h2>
+
+                <!-- Create news div -->
+                <div id="news"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Load Knockout -->
+        <script src="js/lib/knockout-3.4.2.js"></script>
+
+        <!-- Load jQuery -->
+        <script src="js/lib/jquery.min.js"></script>
+
+        <!-- Define viewmodel using Knockout -->
+        <script src="js/app.js"></script>
+
+        <!-- Create the map -->
+        <script src="js/map.js"></script>
+        
+        <!-- Load the Google Map API asynchronously include error handling -->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0AocECCdeMA6Q0hEajNJ4J8BQBL0oeTM&v=3&callback=initMap"
+            onerror="mapError()">
+        </script>
+
+    </body>
+
+</html>

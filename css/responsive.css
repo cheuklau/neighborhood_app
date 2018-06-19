@@ -1,0 +1,40 @@
+/*
+ *
+ * Set flexbox properties
+ *
+ *
+ */
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+/*
+ *
+ * Set desktop breakpoints
+ * 
+ * We switch to a column view at 850px which also works well with mobile.
+ * 
+ */
+
+@media (max-width: 850px) {
+
+  .column__info {
+    width: 100%;
+  }
+
+  .column__map {
+    width: 100%;
+  }
+
+  .column__news {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+}

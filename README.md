@@ -1,4 +1,4 @@
-# Catalog App
+# Neighborhood App
 
 Author: Cheuk Lau
 
@@ -13,7 +13,3 @@ The project was tested using Google Chrome web browser. The app uses Knockout JS
 ## Running the Neighborhood App
 
 To run the neighborhood app, simply open `index.html` into a web browser (note: only tested on Google Chrome).
-
-## Credits
-
-This project is generated as part of Udacity's full-stack web development program.
